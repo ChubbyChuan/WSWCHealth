@@ -1,0 +1,18 @@
+<div *ngIf="!showVerificationPage" ngClass="home-page">
+  <div ngClass="home-page--title">
+    <div ngClass="home-page--text">
+      <p>Your Health</p>
+      <p>Your Convenience</p>
+      <p>Your Choice</p>
+    </div>
+  </div>
+  <div [ngClass]="['row', 'home-button-layout']">
+    <button mat-raised-button [ngClass]="['home-button', 'home-button--right']" (click)="goToVerification()">
+      <mat-icon ngClass="home-button--icon">qr_code</mat-icon>QR Code
+    </button>
+    <button mat-raised-button [ngClass]="['home-button', 'home-button--left']">
+      <mat-icon ngClass="home-button--icon">badge</mat-icon>Scan ID
+    </button>
+  </div>
+</div>
+<app-verification *ngIf="showVerificationPage"></app-verification>

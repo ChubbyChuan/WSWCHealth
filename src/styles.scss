@@ -1,4 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./app/home/home.component.scss";
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  width: 100%; /* Ensure the content takes the full width within the maximum */
+}
+
+app-root {
+  text-align: center;
+}
