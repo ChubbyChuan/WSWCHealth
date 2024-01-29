@@ -1,0 +1,12 @@
+<div>
+      <h1>Welcome, {{ personName }}!</h1>
+
+      <div *ngFor="let drug of drugs" class="drug-container">
+            <div class="drug-info">
+                  <p>{{ drug.name }}</p>
+                  <p>Quantity: {{ drug.quantity }}</p>
+                  <p>Dose: {{ drug.dose }}</p>
+                  <p>Uses: {{ drug.uses }}</p>
+            </div>
+      </div>
+</div>

@@ -8,12 +8,15 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { VerificationComponent } from './verification/verification.component';
+import { ZXingScannerModule } from '@zxing/ngx-scanner';
+import { CollectComponent } from './collect/collect.component';
 
 @NgModule( {
   declarations: [
     AppComponent,
     HomeComponent,
-    VerificationComponent
+    VerificationComponent,
+    CollectComponent
   ],
   imports: [
     CommonModule,
@@ -21,7 +24,9 @@ import { VerificationComponent } from './verification/verification.component';
     AppRoutingModule,
     MatButtonModule,
     MatIconModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    ZXingScannerModule,
+
   ],
   bootstrap: [AppComponent],
   exports:[VerificationComponent]
