@@ -10,6 +10,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { VerificationComponent } from './verification/verification.component';
 import { ZXingScannerModule } from '@zxing/ngx-scanner';
 import { CollectComponent } from './collect/collect.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule( {
   declarations: [
@@ -26,9 +28,10 @@ import { CollectComponent } from './collect/collect.component';
     MatIconModule,
     MatProgressBarModule,
     ZXingScannerModule,
-
+    MatCardModule,
+    MatToolbarModule
   ],
   bootstrap: [AppComponent],
-  exports:[VerificationComponent]
+  exports: [VerificationComponent]
 } )
 export class AppModule { }

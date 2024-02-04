@@ -1,28 +1,27 @@
 /* collect.component.scss */
 
 .collect-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  .drug-container {
-    margin-top: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 10px;
-    width: 300px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .drug-info {
-    font-size: 1rem;
-  }
-  
-  .drug-info p {
-    margin: 5px 0;
-  }
-  
-  /* Add additional styles as needed */
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.drug-container {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  width: 300px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.drug-info {
+  font-size: 1rem;
+}
+
+.drug-info p {
+  margin: 5px 0;
+}
+
+/* Add additional styles as needed */

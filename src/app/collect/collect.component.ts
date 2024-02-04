@@ -12,6 +12,8 @@ export class CollectComponent implements OnInit {
     console.log('CollectComponent instantiated!');
   }
 
+  itemIndex = 1;
+
   ngOnInit() {
     console.log('CollectComponent ngOnInit!');
   }
@@ -21,4 +23,16 @@ export class CollectComponent implements OnInit {
     { name: 'Paracetamol', quantity: 30, dose: '1 tablet', uses: 'Fever reducer' },
     // Add more drugs as needed
   ];
+
+  showNextItem() {
+    if ( this.itemIndex < 2) {
+      this.itemIndex++;
+    }
+  }
+
+  showPreviousItem() {
+    if ( this.itemIndex > 1) {
+      this.itemIndex--;
+    }
+  }
 }
