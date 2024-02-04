@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { drug, Patient } from '../util/constants';
+
 
 
 @Component( {
@@ -19,12 +21,8 @@ export class CollectComponent implements OnInit {
   ngOnInit() {
     console.log( 'CollectComponent ngOnInit!' );
   }
-  // Array of drugs with information
-  drugs = [
-    { name: 'Aspirin', quantity: 20, dose: '1 tablet', uses: 'Pain relief' },
-    { name: 'Paracetamol', quantity: 30, dose: '1 tablet', uses: 'Fever reducer' },
-    // Add more drugs as needed
-  ];
+  patient= Patient
+  drug = drug
 
   showNextItem() {
     if ( this.itemIndex < 2 ) {
