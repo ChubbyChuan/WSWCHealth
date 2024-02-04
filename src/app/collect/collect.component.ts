@@ -18,25 +18,29 @@ export class CollectComponent implements OnInit {
   drug1 = false;
   drug2 = false;
 
+  numberOfDrugs = 2;
+  completeCollection = false;
+
   ngOnInit() {
     console.log( 'CollectComponent ngOnInit!' );
+    this.autoCollectDrugs();
   }
   patient= Patient
   drug = drug
 
-  showNextItem() {
-    if ( this.itemIndex < 2 ) {
-      this.itemIndex++;
-    }
-  }
+  // private showNextItem() {
+  //   if ( this.itemIndex < 2 ) {
+  //     this.itemIndex++;
+  //   }
+  // }
 
-  showPreviousItem() {
-    if ( this.itemIndex > 1 ) {
-      this.itemIndex--;
-    }
-  }
+  // private showPreviousItem() {
+  //   if ( this.itemIndex > 1 ) {
+  //     this.itemIndex--;
+  //   }
+  // }
 
-  collectDrug( index: number ) {
+  private collectDrug( index: number ) {
     switch ( index ) {
       case 1:
         this.drug1 = true;
@@ -44,6 +48,25 @@ export class CollectComponent implements OnInit {
       case 2:
         this.drug2 = true;
         break;
+    }
+  }
+
+  private async autoCollectDrugs() {
+    for ( let i = 1; i <= this.numberOfDrugs; i++ ) {
+      await new Promise( ( resolve ) => {
+        this.itemIndex = i;
+       
+        setTimeout( () => {
+          this.collectDrug( i );
+          if ( this.itemIndex === 2 ) {
+            this.completeCollection = true;
+          }
+          resolve('done');
+
+        }, 4000 );
+        
+      })
+
     }
   }
 }
