@@ -59,6 +59,7 @@ export class CollectComponent implements OnInit {
         setTimeout( () => {
           this.collectDrug( i );
           if ( this.itemIndex === 2 ) {
+            this.itemIndex++;
             this.completeCollection = true;
           }
           resolve('done');

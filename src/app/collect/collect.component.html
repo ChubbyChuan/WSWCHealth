@@ -29,7 +29,7 @@
         <p>Dose: 1 tablet</p>
       </mat-card-content>
       <mat-card-actions>
-        <button mat-button [disabled]="drug1">{{drug1 ? 'Collected' : 'Collect'}}</button>
+        <button mat-button [disabled]="drug1">{{drug1 ? 'Collected' : 'Collecting...'}}</button>
       </mat-card-actions>
     </mat-card>
   </div>
@@ -45,16 +45,16 @@
         <p>Dose: 1 tablet</p>
       </mat-card-content>
       <mat-card-actions>
-        <button mat-button [disabled]="drug2">{{drug2 ? 'Collected' : 'Collect'}}</button>
+        <button mat-button [disabled]="drug2">{{drug2 ? 'Collected' : 'Collecting...'}}</button>
       </mat-card-actions>
     </mat-card>
   </div>
 
-  <!-- <div class="action-button-row">
-    <button mat-raised-button color="primary" (click)="showPreviousItem()">&lt;</button>
-    <br>
-    <button mat-raised-button color="primary" (click)="showNextItem()">&gt;</button>
-  </div> -->
-
-  <!-- <img src="assets/images/Aspirin.jpg"/> -->
+  <div *ngIf="itemIndex == 3"  class="card-content">
+    <mat-card>
+      <mat-card-content>
+        <strong>Collection Completed!</strong>
+      </mat-card-content>
+    </mat-card>
+  </div>
 </div>
