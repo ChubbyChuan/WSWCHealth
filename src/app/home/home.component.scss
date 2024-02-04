@@ -1,8 +1,11 @@
 .home-page {
+  min-width: 25rem ;
   max-width: 60rem;
-  border-color: rgb(226, 243, 248);
-  background-color: rgb(226, 243, 248);
-  height: 40rem;
+  border-color: #607D8B;
+  background-color: #607D8B;
+  max-height: 50rem;
+  min-height: 40rem;
+  
   &--title {
     font-size: 0.9rem;
     font-family: "Roboto", sans-serif;
@@ -13,6 +16,7 @@
     max-width: 30rem;
     word-wrap: break-word;
   }
+
   &--text {
     display: block;
     font-size: 1.5rem;
@@ -47,4 +51,37 @@
     margin-bottom: 0.25rem;
     padding-left: 0.5rem !important;
   }
+}
+
+.card-content {
+  max-height: 26rem;
+  max-width: 15rem;
+  display: flex;
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
+  margin-left: 20%;
+  margin-top: 20%;
+}
+
+.card-image {
+  max-width: 12rem;
+  max-height: 12rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
+  text-align: center; /* Center text within the card */
+}
+
+.action-button-row {
+  display: flex;
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
+  margin-left: 20%;
+  margin-top: 20%;
+  max-width: 15rem;
+}
+
+.action-button-row Button {
+ margin: -2rem 0.5rem 0 0.5rem;
 }
