@@ -27,7 +27,7 @@
         <p>Dose: 1 tablet</p>
       </mat-card-content>
       <mat-card-actions>
-        <button mat-button>Collect</button>
+        <button mat-button (click)="collectDrug(1)" [disabled]="drug1">{{drug1 ? 'Collected' : 'Collect'}}</button>
       </mat-card-actions>
     </mat-card>
   </div>
@@ -43,7 +43,7 @@
         <p>Dose: 1 tablet</p>
       </mat-card-content>
       <mat-card-actions>
-        <button mat-button>Collect</button>
+        <button mat-button (click)="collectDrug(2)" [disabled]="drug2">{{drug2 ? 'Collected' : 'Collect'}}</button>
       </mat-card-actions>
     </mat-card>
   </div>
